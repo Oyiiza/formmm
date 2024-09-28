@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        p{
-            width: 300px;
-            height: 200px;
-            background-color: aqua;
-        }
-    </style>
+   <style>
+    .main{
+        display: flex;
+       justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+    .contain{
+        width: 300px;
+        height: 200px;
+        background-color: blueviolet;
+        border-radius: 20px;
+    }
+    .other{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    
+    h1{
+        position: relative;
+        top: 200px;
+        font-size: 2rem;
+    }
+   
+       
+   
+   </style>
 </head>
 <body>
-   <p class="output" id="output11"></p>
+    <h1 class="other">Previous Data</h1>
+    <div class="main">
+      
+        <div class="contain">
+            
+  <div class="other">Fristname:<br><span id="first-name"></span></div>
+  <div class="other">Lastname:<br><span id="last-name"></span></div>
+  <div class="other">Lastname:<br><span id="email"></span></div>
+</div>
+</div>
 
 
-   <script>
-    //var r =window.location.search;
-    //alert(r);
 
-   var display = document.getElementById("fname")
-   var display1 = document.getElementById("lname")
-    var display2 = document.getElementById("email")
-   var btn = document.getElementById("btn 1");
-    var output1 = document.getElementById("output11");
-   function fun1(){
-        
-        output1.innerHTML = display.value + display1.value + display2.value;
-
-   }
-   btn.addEventListener(click, fun1);
+  
+  
+  
+  <script>
+    var FirstName = localStorage.getItem('first-name');
+ var LastName = localStorage.getItem('last-name');
+ var email = localStorage.getItem('email');
 
 
-</script>
+ document.getElementById("first-name").textContent = FirstName;
+ document.getElementById("last-name").textContent = LastName;
+ document.getElementById("email").textContent = email;
+
+
+
+  </script>
 </body>
 </html>
