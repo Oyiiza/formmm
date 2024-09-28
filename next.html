@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+   <p class="output" id="output11"></p>
+
+
+   <script>
+    //var r =window.location.search;
+    //alert(r);
+
+   var display = document.getElementById("fname")
+   var display1 = document.getElementById("lname")
+    var display2 = document.getElementById("email")
+   var btn = document.getElementById("btn 1");
+    var output1 = document.getElementById("output11");
+   function fun1(){
+        
+        output1.innerHTML = display.value + display1.value + display2.value;
+
+   }
+   btn.addEventListener(click, fun1);
+
+
+</script>
+</body>
+</html>

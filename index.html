@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .form{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        
+        
+   
+         
+        }
+        .form-input{
+    width: 400px;
+    height: 250px;
+    background-color: lightgray;
+    text-align: center;
+   
+  
+        }
+      input{
+        text-align: center;
+        cursor: pointer;
+       border-radius: 20px;
+      
+       
+       
+       
+       
+      
+      }
+      label{
+        display: block;
+   margin-left: 20px;
+    margin-bottom: px;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+    cursor: default;
+       
+      
+
+       
+      }
+     button{
+        margin-top: 10px;
+     }
+     .label{
+        margin-top: 20px;
+     }
+     h1{
+      position: relative;
+      top: 150px;
+      text-align: center;
+       
+     }
+       
+      
+       
+    
+
+        
+    </style>
+</head>
+<body>
+    <h1>SingUp Form</h1>
+    <div class="form" id="newform">
+       
+       
+       
+        <div id="mainform" class="form-input">
+        <form   action="" id="userForm">
+           <label for="fname" id="firstname" class="label">First name</label><br>
+            <input type="text" id="fname" placeholder="First name"><br>
+            <label for="lname">Last name</label><br>
+            <input type="text" name="lname" id="lname" placeholder="Last name"> <br>
+            <label for="email">Email</label><br>
+           <input type="email" name="email" id="email" placeholder="Email"><br>
+           <button type="submit" id="btn1">Submit</button>
+        </form>
+    </div>
+</div>
+<script>
+  var form = document.getElementById("userForm");
+
+var firstname = document.getElementById("fname");
+var lastname = document.getElementById("lname");
+ var email = document.getElementById("email");
+
+
+form.addEventListener("submit", function(e){
+ e.preventDefault();
+
+   var firstnameValue = firstname.value;
+  var lastnameValue =  lastname.value;
+   var emailValue = email.value;
+   localStorage.setItem('first-name', firstnameValue);
+   localStorage.setItem('last-name', lastnameValue);
+   localStorage.setItem('email', emailValue);
+
+window.location.href ="next.html";
+
+
+
+
+})
+</script>
+</body>
+</html>
